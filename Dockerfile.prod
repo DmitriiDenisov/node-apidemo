@@ -1,0 +1,17 @@
+FROM keymetrics/pm2:10-stretch
+
+COPY ./ /
+
+RUN npm install
+
+ENV NODE_ENV development
+ENV APP_PREFIX ''
+ENV APP_PORT 4500
+ENV APP_NAME dataapi
+
+RUN npm run build --no-audit
+
+# Expose the listening port of your app
+EXPOSE 4500
+
+CMD [ "pm2-runtime", "start", "ecosystem.config.js", "--env", "production" ]

@@ -1,0 +1,1 @@
+export { getSectors } from './sector';
