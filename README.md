@@ -1,10 +1,12 @@
-# Node + Express 
+# Node + Express. Restful API using Node + Express 
 
-Restful API using Node + Express. 
+## Run:
+1. `sudo sh buildImg.sh`
+2. `sudo sh mountImg.sh`
+3. `curl "localhost:4500/data-api/sectors"` for testing
+4. (optional) Also Swagger is available: `http://<ip>:4500/data-api/api-docs`
 
-We will use:
-
-**NodeJS v10.16.2 or higher**
+The server will start running at port 4500.
 
 **ExpressJS v4**
 
@@ -18,12 +20,5 @@ We will use:
 
     **npm run test**
 
-3. Once you are ready to deploy, run below commands to start: 
-
-    **sudo sh buildImg.sh**
-
-    **sudo sh mountImg.sh**
-
-The server will start running at port 4500.
 
 
